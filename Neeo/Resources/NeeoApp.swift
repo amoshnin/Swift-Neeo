@@ -14,9 +14,9 @@ struct NeeoApp: App {
     var body: some Scene {
         WindowGroup {
             if isAuth {
-                ContentView()
+                TabBarNavigator()
             } else {
-                ContentView()
+                WelcomeView()
             }
         }
     }

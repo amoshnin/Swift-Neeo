@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		AC275B4425F2DB840034075C /* NeeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4325F2DB840034075C /* NeeoApp.swift */; };
-		AC275B4625F2DB840034075C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4525F2DB840034075C /* ContentView.swift */; };
+		AC275B4625F2DB840034075C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4525F2DB840034075C /* HomeView.swift */; };
 		AC275B4825F2DB870034075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4725F2DB870034075C /* Assets.xcassets */; };
 		AC275B4B25F2DB870034075C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4A25F2DB870034075C /* Preview Assets.xcassets */; };
+		ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */; };
+		ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */; };
+		ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */; };
+		ACD2799C25F2DE2700EBB8B6 /* MessangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */; };
+		ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC275B4025F2DB840034075C /* Neeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC275B4325F2DB840034075C /* NeeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeeoApp.swift; sourceTree = "<group>"; };
-		AC275B4525F2DB840034075C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC275B4525F2DB840034075C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC275B4725F2DB870034075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC275B4A25F2DB870034075C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC275B4C25F2DB870034075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigator.swift; sourceTree = "<group>"; };
+		ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerView.swift; sourceTree = "<group>"; };
+		ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +84,9 @@
 		AC275B5325F2DBA80034075C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC275B4525F2DB840034075C /* ContentView.swift */,
+				ACD2799425F2DDE600EBB8B6 /* Navigators */,
+				ACD2799325F2DDD800EBB8B6 /* Primary */,
+				ACD2799F25F2DE5500EBB8B6 /* Secondary */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +119,33 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		ACD2799325F2DDD800EBB8B6 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */,
+				ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */,
+				AC275B4525F2DB840034075C /* HomeView.swift */,
+				ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		ACD2799425F2DDE600EBB8B6 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		ACD2799F25F2DE5500EBB8B6 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+				ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */,
+			);
+			path = Secondary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC275B4625F2DB840034075C /* ContentView.swift in Sources */,
+				AC275B4625F2DB840034075C /* HomeView.swift in Sources */,
 				AC275B4425F2DB840034075C /* NeeoApp.swift in Sources */,
+				ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */,
+				ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */,
+				ACD2799C25F2DE2700EBB8B6 /* MessangerView.swift in Sources */,
+				ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */,
+				ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
