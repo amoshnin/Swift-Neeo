@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct AuthView: View {
+    // MARK: - State
     @EnvironmentObject var authSessionService: AuthService
     
+    // MARK: - UI Components
     var body: some View {
         NavigationView {
             VStack {

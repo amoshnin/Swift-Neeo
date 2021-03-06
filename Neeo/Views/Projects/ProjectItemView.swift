@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ProjectItemView: View {
+    // MARK: - State (Initialiser-modifiable)
     var project: Project
     
+    // MARK: - UI Components
     var body: some View {
         HStack {
             VStack(alignment: .leading) {

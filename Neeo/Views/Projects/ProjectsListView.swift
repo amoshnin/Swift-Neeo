@@ -27,20 +27,12 @@ struct ProjectsListView: View {
             self.viewModel.subscribe()
         }
         .onDisappear() {
-            // By unsubscribing from the view model, we prevent updates coming in from
-            // Firestore to be reflected in the UI. Since we do want to receive updates
-            // when the user is on any of the child screens, we keep the subscription active!
-            //
-            // print("BooksListView disappears. Unsubscribing from data updates.")
-            // self.viewModel.unsubscribe()
+            /* By unsubscribing from the view model, we prevent updates coming in from
+               Firestore to be reflected in the UI. Since we do want to receive updates
+               when the user is on any of the child screens, we keep the subscription active!
+               print("BooksListView disappears. Unsubscribing from data updates.") */
+            self.viewModel.unsubscribe()
         }
-    }
-    
-    let data = (1...1000).map { "Item \($0)" }
-    private func projectRowView(project: Project) -> some View {
-        NavigationLink(destination: ProjectDetailsView(project: project)) {
-            Text(project.title)
-        } //: NAVIGATION_LINK
     }
 }
 

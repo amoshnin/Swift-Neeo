@@ -10,15 +10,18 @@ import PureSwiftUI
 import Firebase
 
 struct AuthFormView: View {
+    // MARK: - State
     var isRegister: Bool?
     @EnvironmentObject var authSessionService: AuthService
     
+    // MARK: - State (Initialiser-modifiable)
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isLoading = false
     @State private var isError = false
     @State private var errorMessage = ""
     
+    // MARK: - UI Components
     var body: some View {
         Form {
             if isError {
@@ -43,6 +46,7 @@ struct AuthFormView: View {
         .listStyle(GroupedListStyle())
     }
     
+    // MARK: - Action Handlers
     private func login() {
         self.isLoading = true
         self.isError = false
