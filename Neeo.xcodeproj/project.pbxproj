@@ -3,33 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC11CFFE25F2E06C0062439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */; };
+		AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D01325F2E1910062439B /* FirebaseDelegate.swift */; };
+		AC11D01E25F2E7BA0062439B /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */; };
+		AC11D02125F2E8540062439B /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02025F2E8540062439B /* ProjectModel.swift */; };
+		AC11D02425F2E9EF0062439B /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */; };
 		AC275B4425F2DB840034075C /* NeeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4325F2DB840034075C /* NeeoApp.swift */; };
 		AC275B4625F2DB840034075C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4525F2DB840034075C /* HomeView.swift */; };
 		AC275B4825F2DB870034075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4725F2DB870034075C /* Assets.xcassets */; };
 		AC275B4B25F2DB870034075C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4A25F2DB870034075C /* Preview Assets.xcassets */; };
+		AC4AAA9D25F3520700E18BFA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */; };
+		AC4AAAA325F3568600E18BFA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAA225F3568600E18BFA /* ProjectView.swift */; };
+		AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */; };
+		AC4AAAAB25F35AF500E18BFA /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC4AAAAA25F35AF500E18BFA /* PureSwiftUI */; };
 		ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */; };
 		ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */; };
 		ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */; };
 		ACD2799C25F2DE2700EBB8B6 /* MessangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */; };
 		ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */; };
+		D9809FB21793C5036D3B7B63 /* Pods_Neeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E329342E59DB38C1F1A70750 /* Pods_Neeo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66AC2098F9118DA203627C8D /* Pods-Neeo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neeo.debug.xcconfig"; path = "Target Support Files/Pods-Neeo/Pods-Neeo.debug.xcconfig"; sourceTree = "<group>"; };
+		AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC11D01325F2E1910062439B /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
+		AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
+		AC11D02025F2E8540062439B /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
 		AC275B4025F2DB840034075C /* Neeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC275B4325F2DB840034075C /* NeeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeeoApp.swift; sourceTree = "<group>"; };
 		AC275B4525F2DB840034075C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC275B4725F2DB870034075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC275B4A25F2DB870034075C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC275B4C25F2DB870034075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		AC4AAAA225F3568600E18BFA /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
 		ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigator.swift; sourceTree = "<group>"; };
 		ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerView.swift; sourceTree = "<group>"; };
 		ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E329342E59DB38C1F1A70750 /* Pods_Neeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF4D11C0F5E54987A7451FC /* Pods-Neeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neeo.release.xcconfig"; path = "Target Support Files/Pods-Neeo/Pods-Neeo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +58,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4AAAAB25F35AF500E18BFA /* PureSwiftUI in Frameworks */,
+				D9809FB21793C5036D3B7B63 /* Pods_Neeo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E5B35F29893C7B8A4D3650 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66AC2098F9118DA203627C8D /* Pods-Neeo.debug.xcconfig */,
+				EFF4D11C0F5E54987A7451FC /* Pods-Neeo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A3DB01F31EF5FAC8D79DB899 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E329342E59DB38C1F1A70750 /* Pods_Neeo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC11D01825F2E2170062439B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AC11D01325F2E1910062439B /* FirebaseDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AC11D01B25F2E6950062439B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		AC275B3725F2DB840034075C = {
 			isa = PBXGroup;
 			children = (
 				AC275B4225F2DB840034075C /* Neeo */,
 				AC275B4125F2DB840034075C /* Products */,
+				63E5B35F29893C7B8A4D3650 /* Pods */,
+				A3DB01F31EF5FAC8D79DB899 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,10 +122,12 @@
 			children = (
 				AC275B5825F2DC940034075C /* Managers */,
 				AC275B5725F2DC660034075C /* Resources */,
+				AC11D01B25F2E6950062439B /* Repositories */,
 				AC275B5525F2DBAE0034075C /* Models */,
 				AC275B5425F2DBAB0034075C /* ViewModels */,
 				AC275B5325F2DBA80034075C /* Views */,
 				AC275B4C25F2DB870034075C /* Info.plist */,
+				AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */,
 				AC275B4925F2DB870034075C /* Preview Content */,
 			);
 			path = Neeo;
@@ -84,8 +144,9 @@
 		AC275B5325F2DBA80034075C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AAAA125F3563F00E18BFA /* Components */,
 				ACD2799425F2DDE600EBB8B6 /* Navigators */,
-				ACD2799325F2DDD800EBB8B6 /* Primary */,
+				ACD2799325F2DDD800EBB8B6 /* Core */,
 				ACD2799F25F2DE5500EBB8B6 /* Secondary */,
 			);
 			path = Views;
@@ -94,6 +155,8 @@
 		AC275B5425F2DBAB0034075C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */,
+				AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -101,6 +164,7 @@
 		AC275B5525F2DBAE0034075C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC11D02025F2E8540062439B /* ProjectModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,8 +172,9 @@
 		AC275B5725F2DC660034075C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC275B4725F2DB870034075C /* Assets.xcassets */,
+				AC11D01825F2E2170062439B /* Delegates */,
 				AC275B4325F2DB840034075C /* NeeoApp.swift */,
+				AC275B4725F2DB870034075C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -121,15 +186,23 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		ACD2799325F2DDD800EBB8B6 /* Primary */ = {
+		AC4AAAA125F3563F00E18BFA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ACD2799325F2DDD800EBB8B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */,
+				ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */,
 				ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */,
 				AC275B4525F2DB840034075C /* HomeView.swift */,
-				ACD2799B25F2DE2700EBB8B6 /* MessangerView.swift */,
 			);
-			path = Primary;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		ACD2799425F2DDE600EBB8B6 /* Navigators */ = {
@@ -144,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */,
+				AC4AAAA225F3568600E18BFA /* ProjectView.swift */,
 			);
 			path = Secondary;
 			sourceTree = "<group>";
@@ -155,15 +229,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC275B4F25F2DB870034075C /* Build configuration list for PBXNativeTarget "Neeo" */;
 			buildPhases = (
+				DFDDDCA126F1E044A2C3716F /* [CP] Check Pods Manifest.lock */,
 				AC275B3C25F2DB840034075C /* Sources */,
 				AC275B3D25F2DB840034075C /* Frameworks */,
 				AC275B3E25F2DB840034075C /* Resources */,
+				E886D251F270701E8282F063 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Neeo;
+			packageProductDependencies = (
+				AC4AAAAA25F35AF500E18BFA /* PureSwiftUI */,
+			);
 			productName = Neeo;
 			productReference = AC275B4025F2DB840034075C /* Neeo.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +270,9 @@
 				Base,
 			);
 			mainGroup = AC275B3725F2DB840034075C;
+			packageReferences = (
+				AC4AAAA925F35AF500E18BFA /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+			);
 			productRefGroup = AC275B4125F2DB840034075C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,10 +289,53 @@
 			files = (
 				AC275B4B25F2DB870034075C /* Preview Assets.xcassets in Resources */,
 				AC275B4825F2DB870034075C /* Assets.xcassets in Resources */,
+				AC11CFFE25F2E06C0062439B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFDDDCA126F1E044A2C3716F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neeo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E886D251F270701E8282F063 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC275B3C25F2DB840034075C /* Sources */ = {
@@ -218,12 +343,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC275B4625F2DB840034075C /* HomeView.swift in Sources */,
+				AC11D02425F2E9EF0062439B /* ProjectsListViewModel.swift in Sources */,
 				AC275B4425F2DB840034075C /* NeeoApp.swift in Sources */,
 				ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */,
+				AC4AAA9D25F3520700E18BFA /* ProjectViewModel.swift in Sources */,
+				AC11D01E25F2E7BA0062439B /* ProjectsRepository.swift in Sources */,
 				ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */,
+				AC11D02125F2E8540062439B /* ProjectModel.swift in Sources */,
 				ACD2799C25F2DE2700EBB8B6 /* MessangerView.swift in Sources */,
+				AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */,
 				ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */,
 				ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */,
+				AC4AAAA325F3568600E18BFA /* ProjectView.swift in Sources */,
+				AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +480,7 @@
 		};
 		AC275B5025F2DB870034075C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66AC2098F9118DA203627C8D /* Pods-Neeo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +503,7 @@
 		};
 		AC275B5125F2DB870034075C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF4D11C0F5E54987A7451FC /* Pods-Neeo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,6 +546,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC4AAAA925F35AF500E18BFA /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC4AAAAA25F35AF500E18BFA /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC4AAAA925F35AF500E18BFA /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC275B3825F2DB840034075C /* Project object */;
 }

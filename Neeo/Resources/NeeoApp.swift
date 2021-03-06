@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct NeeoApp: App {
     @AppStorage("isAuth") private var isAuth: Bool = false
-    
+    @UIApplicationDelegateAdaptor(FirebaseDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
             if isAuth {
