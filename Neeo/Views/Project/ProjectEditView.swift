@@ -21,10 +21,10 @@ enum Action {
 struct ProjectEditView: View {
     // MARK: - State
     @Environment(\.presentationMode) private var presentationMode
-    @State var isActionSheetPresent = false
+    @StateObject var viewModel = ProjectViewModel()
+    @State private var isSheetOpen = false
     
     // MARK: - State (Initialiser-modifiable)
-    @StateObject var viewModel = ProjectViewModel()
     var mode: Mode = .new
     var completionHandler: ((Result<Action, Error>) -> Void)?
     
@@ -39,7 +39,7 @@ struct ProjectEditView: View {
                 
                 if self.mode == .edit {
                     Section {
-                        Button("Delete book") { self.isActionSheetPresent.toggle() }
+                        Button("Delete book") { self.isSheetOpen.toggle() }
                             .foregroundColor(.red)
                     } //: SECTION
                 }
@@ -50,7 +50,7 @@ struct ProjectEditView: View {
                 leading: cancelButton(),
                 trailing: saveButton()
             )
-            .actionSheet(isPresented: self.$isActionSheetPresent) {
+            .actionSheet(isPresented: self.$isSheetOpen) {
                 ActionSheet(title: Text("Are you sure?"), buttons:
                                 [.destructive(Text("Delete book"), action: { self.handleDeleteTapped() }),
                                  .cancel()])

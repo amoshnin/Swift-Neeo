@@ -9,18 +9,31 @@ import SwiftUI
 
 struct ProjectDetailsView: View {
     // MARK: - State
-    
+    @Environment(\.presentationMode) var presentationMode
+    @State var isSheetOpen = false
     
     // MARK: - State (Initialiser-modifiable)
     var project: Project
     
     // MARK: - UI Components
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Text(project.title)
+            Text(project.description)
+        } //: FORM
+        .navigationBarTitle(project.title)
+        .navigationBarItems(trailing: editButton { self.isSheetOpen.toggle() } )
+        .sheet(isPresented: self.$isSheetOpen) {
+            ProjectEditView(viewModel: ProjectViewModel(project: self.project), mode: .edit) { (result) in
+                if case .success(let action) = result, action == .delete {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            }
+        }
     }
-     
-    private func editButton() -> some View {
-        Button(action: {}) {
+    
+    private func editButton(action: @escaping () -> Void) -> some View {
+        Button(action: action) {
             Text("Edit")
         }
     }

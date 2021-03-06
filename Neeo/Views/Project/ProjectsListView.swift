@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectsListView: View {
     // MARK: - State
     @StateObject var viewModel = ProjectsViewModel()
-    @State var isProjectSheetPresent = false
+    @State var isSheetOpen = false
     
     // MARK: - UI Components
     var body: some View {
@@ -35,12 +35,12 @@ struct ProjectsListView: View {
               // print("BooksListView disappears. Unsubscribing from data updates.")
               // self.viewModel.unsubscribe()
             }
-            .sheet(isPresented: self.$isProjectSheetPresent, content: { ProjectEditView() })
+            .sheet(isPresented: self.$isSheetOpen, content: { ProjectEditView() })
         } //: NAVIGATION_VIEW
     }
     
     private func addButton() -> some View {
-        Button(action: { self.isProjectSheetPresent.toggle() }) {
+        Button(action: { self.isSheetOpen.toggle() }) {
             Image(systemName: "plus")
         } //: BUTTON
     }
