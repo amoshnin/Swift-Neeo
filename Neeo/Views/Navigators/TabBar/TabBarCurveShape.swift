@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabCurve: Shape {
+struct TabBarCurveShape: Shape {
     // MARK: - State
     var tabPoint: CGFloat
     

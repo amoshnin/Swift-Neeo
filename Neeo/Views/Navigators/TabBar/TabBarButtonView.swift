@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBarButton: View {
+struct TabBarButtonView: View {
     // MARK: - State
     @Environment(\.colorScheme) var scheme
     
@@ -50,6 +50,6 @@ struct TabBarButton_Previews: PreviewProvider {
     
     static var previews: some View {
         let number: CGFloat = 23
-        return TabBarButton(image: "house", selectedTab: .constant(""), tabPoints: .constant([number]))
+        return TabBarButtonView(image: "house", selectedTab: .constant(""), tabPoints: .constant([number]))
     }
 }

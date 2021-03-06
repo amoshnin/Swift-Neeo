@@ -35,11 +35,11 @@ struct TabBarNavigator: View {
             Color.clear
             HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { item in
-                    TabBarButton(image: item, selectedTab: self.$selectedTab, tabPoints: $tabPoints)
+                    TabBarButtonView(image: item, selectedTab: self.$selectedTab, tabPoints: $tabPoints)
                 }
             }
             .padding()
-            .background((self.scheme == .dark ? Color("background3") : Color.white)  .clipShape(TabCurve(tabPoint: self.getCurvePoint() - 15)))
+            .background((self.scheme == .dark ? Color("background3") : Color.white)  .clipShape(TabBarCurveShape(tabPoint: self.getCurvePoint() - 15)))
             .overlay(Circle()
                         .fill(Color.white)
                         .frame(width: 5, height: 5)
@@ -50,6 +50,7 @@ struct TabBarNavigator: View {
             .cornerRadius(15)
             .padding(.horizontal)
             .shadow(2)
+            .neumorphicShadow()
         }
     }
     
