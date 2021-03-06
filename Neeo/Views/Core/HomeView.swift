@@ -14,13 +14,14 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                self.list(projects: projectsListViewModel.viewModels)
+                self.list(projects: self.projectsListViewModel.viewModels)
             } //: VSTACK
             .sheet(isPresented: self.$showForm,
-                   content: { ProjectForm(showForm: self.$showForm, projectsListViewModel: projectsListViewModel) })
+                   content: { ProjectForm(projectsListViewModel: projectsListViewModel) })
             
             .navigationBarItems(trailing: Button("Add new") { self.showForm.toggle() })
         } //: NAVIGATION_VIEW
+        .onAppear{print(self.projectsListViewModel.viewModels, "the list")}
     }
     
     private func list(projects: [ProjectViewModel]) -> some View {
@@ -33,7 +34,7 @@ struct HomeView: View {
 }
 
 private struct ProjectForm: View {
-    @Binding var showForm: Bool
+    @Environment(\.presentationMode) var presentationMode
     var projectsListViewModel: ProjectsListViewModel
     
     @State private var text: String = ""
@@ -50,7 +51,7 @@ private struct ProjectForm: View {
                 
                 Button("Submit") {
                     self.addProject(title: text)
-                    self.showForm = false
+                    self.presentationMode.wrappedValue.dismiss()
                 } //: BUTTON
             } //: FORM
             .navigationBarTitle("New Project")

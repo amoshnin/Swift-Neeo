@@ -15,7 +15,8 @@ class ProjectsListViewModel: ObservableObject {
     init() {
         repository
             .$projects.map { projects in
-                projects.map(ProjectViewModel.init)
+                print(projects, "in listviewmodel")
+                return projects.map(ProjectViewModel.init)
             }
             .assign(to: \.viewModels, on: self)
             .store(in: &cancellables)

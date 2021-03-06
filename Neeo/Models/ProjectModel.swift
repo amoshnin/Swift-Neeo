@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct ProjectModel: Identifiable, Codable {
-    let id = UUID()
-    let title: String
+    @DocumentID var id: String?
+    var title: String
     
-    let createdAt: Date
-    let updatedAt: Date
+    var createdAt: Date
+    var updatedAt: Date
 }
+
+#if DEBUG
+let projectsTestData = (1...10).map { index in
+    ProjectViewModel( project: ProjectModel(title: "Title", createdAt: Date(), updatedAt: Date()) )
+}
+#endif

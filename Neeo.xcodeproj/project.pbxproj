@@ -120,7 +120,6 @@
 		AC275B4225F2DB840034075C /* Neeo */ = {
 			isa = PBXGroup;
 			children = (
-				AC275B5825F2DC940034075C /* Managers */,
 				AC275B5725F2DC660034075C /* Resources */,
 				AC11D01B25F2E6950062439B /* Repositories */,
 				AC275B5525F2DBAE0034075C /* Models */,
@@ -144,7 +143,6 @@
 		AC275B5325F2DBA80034075C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AAAA125F3563F00E18BFA /* Components */,
 				ACD2799425F2DDE600EBB8B6 /* Navigators */,
 				ACD2799325F2DDD800EBB8B6 /* Core */,
 				ACD2799F25F2DE5500EBB8B6 /* Secondary */,
@@ -179,19 +177,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AC275B5825F2DC940034075C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		AC4AAAA125F3563F00E18BFA /* Components */ = {
+		AC4AAAAD25F3628C00E18BFA /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */,
+				AC4AAAA225F3568600E18BFA /* ProjectView.swift */,
 			);
-			path = Components;
+			path = Project;
 			sourceTree = "<group>";
 		};
 		ACD2799325F2DDD800EBB8B6 /* Core */ = {
@@ -216,8 +208,8 @@
 		ACD2799F25F2DE5500EBB8B6 /* Secondary */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AAAAD25F3628C00E18BFA /* Project */,
 				ACD279A125F2DE7900EBB8B6 /* WelcomeView.swift */,
-				AC4AAAA225F3568600E18BFA /* ProjectView.swift */,
 			);
 			path = Secondary;
 			sourceTree = "<group>";

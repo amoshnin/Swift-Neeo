@@ -13,7 +13,7 @@ class ProjectViewModel: ObservableObject, Identifiable {
     private var cancellables = Set<AnyCancellable>()
     
     @Published var project: ProjectModel
-    var id: UUID?
+    var id = ""
     
     init(project: ProjectModel) {
         self.project = project
@@ -22,5 +22,13 @@ class ProjectViewModel: ObservableObject, Identifiable {
             .compactMap { $0.id }
             .assign(to: \.id, on: self)
             .store(in: &cancellables)
+    }
+    
+    func update(project: ProjectModel) {
+        repository.update(project)
+    }
+    
+    func delete() {
+        repository.delete(self.project)
     }
 }
