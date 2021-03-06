@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct AuthView: View {
+    @EnvironmentObject var authSessionService: AuthSessionService
+    
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink("Login with email", destination: AuthFormView())
                 NavigationLink("Register with email", destination: AuthFormView(isRegister: true))
+                
+                Button("SignInWithGoogle") { authSessionService.signInWithGoogle() }
             } //: VSTACK
         } //: NAVIGATION_VIEW
     }

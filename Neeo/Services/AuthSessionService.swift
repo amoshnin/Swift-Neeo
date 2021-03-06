@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Firebase
+import GoogleSignIn
 
 class AuthSessionService: ObservableObject {
     var didChange = PassthroughSubject<AuthSessionService, Never>()
@@ -32,6 +33,11 @@ class AuthSessionService: ObservableObject {
         if let handle = handle {
             Auth.auth().removeStateDidChangeListener(handle)
         }
+    }
+    
+    func signInWithGoogle() {
+        GIDSignIn.sharedInstance().presentingViewController = UIApplication.shared.windows.first?.rootViewController
+        GIDSignIn.sharedInstance().signIn()
     }
     
     func register(

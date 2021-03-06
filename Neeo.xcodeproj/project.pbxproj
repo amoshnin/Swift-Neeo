@@ -254,6 +254,7 @@
 				AC275B3D25F2DB840034075C /* Frameworks */,
 				AC275B3E25F2DB840034075C /* Resources */,
 				E886D251F270701E8282F063 /* [CP] Embed Pods Frameworks */,
+				8D406F67A2A1321A10864400 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +317,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8D406F67A2A1321A10864400 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neeo/Pods-Neeo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DFDDDCA126F1E044A2C3716F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
