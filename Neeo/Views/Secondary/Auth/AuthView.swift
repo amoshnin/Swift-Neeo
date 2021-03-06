@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthHomeView: View {
+struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -20,6 +20,6 @@ struct AuthHomeView: View {
 
 struct AuthHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthHomeView()
+        AuthView()
     }
 }

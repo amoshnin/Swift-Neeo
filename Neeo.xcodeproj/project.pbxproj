@@ -21,8 +21,9 @@
 		AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */; };
 		AC4AAAAB25F35AF500E18BFA /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC4AAAAA25F35AF500E18BFA /* PureSwiftUI */; };
 		AC4AAAB025F3631D00E18BFA /* AuthSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAAF25F3631D00E18BFA /* AuthSessionService.swift */; };
-		AC4AAAB425F3643D00E18BFA /* AuthHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAB325F3643D00E18BFA /* AuthHomeView.swift */; };
+		AC4AAAB425F3643D00E18BFA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAB325F3643D00E18BFA /* AuthView.swift */; };
 		AC4AAAB825F3645900E18BFA /* AuthFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAB725F3645900E18BFA /* AuthFormView.swift */; };
+		AC86509325F3709500AC5BAE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86509225F3709500AC5BAE /* UserModel.swift */; };
 		ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */; };
 		ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */; };
 		ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */; };
@@ -48,8 +49,9 @@
 		AC4AAAA225F3568600E18BFA /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
 		AC4AAAAF25F3631D00E18BFA /* AuthSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionService.swift; sourceTree = "<group>"; };
-		AC4AAAB325F3643D00E18BFA /* AuthHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHomeView.swift; sourceTree = "<group>"; };
+		AC4AAAB325F3643D00E18BFA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		AC4AAAB725F3645900E18BFA /* AuthFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormView.swift; sourceTree = "<group>"; };
+		AC86509225F3709500AC5BAE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigator.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				AC11D02025F2E8540062439B /* ProjectModel.swift */,
+				AC86509225F3709500AC5BAE /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,7 +207,7 @@
 		AC4AAAB225F3642C00E18BFA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AAAB325F3643D00E18BFA /* AuthHomeView.swift */,
+				AC4AAAB325F3643D00E18BFA /* AuthView.swift */,
 				AC4AAAB725F3645900E18BFA /* AuthFormView.swift */,
 			);
 			path = Auth;
@@ -362,7 +365,7 @@
 				AC275B4625F2DB840034075C /* HomeView.swift in Sources */,
 				AC11D02425F2E9EF0062439B /* ProjectsListViewModel.swift in Sources */,
 				AC275B4425F2DB840034075C /* StartApp.swift in Sources */,
-				AC4AAAB425F3643D00E18BFA /* AuthHomeView.swift in Sources */,
+				AC4AAAB425F3643D00E18BFA /* AuthView.swift in Sources */,
 				ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */,
 				AC4AAA9D25F3520700E18BFA /* ProjectViewModel.swift in Sources */,
 				AC11D01E25F2E7BA0062439B /* ProjectsRepository.swift in Sources */,
@@ -375,6 +378,7 @@
 				ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */,
 				ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */,
 				AC4AAAA325F3568600E18BFA /* ProjectView.swift in Sources */,
+				AC86509325F3709500AC5BAE /* UserModel.swift in Sources */,
 				AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

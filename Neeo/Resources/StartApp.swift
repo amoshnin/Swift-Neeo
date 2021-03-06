@@ -10,22 +10,34 @@ import Firebase
 
 @main
 struct StartView: App {
-    @AppStorage("isAuth") private var isAuth: Bool = false
     @UIApplicationDelegateAdaptor(FirebaseDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            if isAuth {
+            VStack {
                 AuthNavigatorView()
-            } else {
-                WelcomeView()
-            }
+            }.environmentObject(AuthSessionService())
         } //: WINDOW_GROUP
+        
     }
 }
 
 private struct AuthNavigatorView: View {
+    @AppStorage("isAuth") private var isAuth: Bool = false
+    @EnvironmentObject var authSessionService: AuthSessionService
+    
     var body: some View  {
-        TabBarNavigator()
+        VStack {
+            if self.isAuth {
+                if self.authSessionService.session != nil {
+                    TabBarNavigator()
+                } else {
+                    AuthView()
+                }
+            } else {
+                WelcomeView()
+            }
+        } //: VSTACK
+        .onAppear { self.authSessionService.listen() }
     }
 }

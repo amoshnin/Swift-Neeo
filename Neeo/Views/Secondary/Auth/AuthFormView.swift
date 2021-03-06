@@ -6,25 +6,66 @@
 //
 
 import SwiftUI
+import PureSwiftUI
+import Firebase
 
 struct AuthFormView: View {
     var isRegister: Bool?
+    @EnvironmentObject var authSessionService: AuthSessionService
+    
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var isLoading = false
+    @State private var isError = false
+    @State private var errorMessage = ""
     
     var body: some View {
         Form {
+            if isError {
+                Section(header: Text("Feedback")) {
+                    Text(self.errorMessage)
+                        .foregroundColor(.red)
+                }
+            }
+            
             Section(header: Text("Credentials")) {
-                TextField("Email", text: $email)
-                SecureField("Password", text: $password)
+                TextField("Email", text: self.$email)
+                SecureField("Password", text: self.$password)
             } //: SECTION
             
+            
             if self.isRegister == true {
-                Button("Register") {  }
+                Button("Register", action: self.register)
             } else {
-                Button("Login") {  }
+                Button("Login", action: self.login)
             }
-        } //: NAVIGATION_VIEW
+        } //: FORM
+        .listStyle(GroupedListStyle())
+    }
+    
+    private func login() {
+        self.isLoading = true
+        self.isError = false
+        self.authSessionService.login(email: self.email, password: self.password, handler: self.handleResponse)
+    }
+    
+    private func register() {
+        self.isLoading = true
+        self.isError = false
+        self.authSessionService.register(email: self.email, password: self.password, handler: self.handleResponse)
+    }
+    
+    private func handleResponse(result: AuthDataResult?, error: Error?) {
+        self.isLoading = false
+        if error != nil {
+            self.isError = true
+            if let error = error?.localizedDescription {
+                self.errorMessage = error
+            }
+        } else {
+            self.email = ""
+            self.password = ""
+        }
     }
 }
 

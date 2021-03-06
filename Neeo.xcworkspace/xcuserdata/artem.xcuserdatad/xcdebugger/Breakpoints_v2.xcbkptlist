@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A1FFB4C-0117-4E3F-B574-2B8C9D0F4047"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F266B97-A505-47DE-902F-56FF8CD45B64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Neeo/Resources/StartApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "AuthNavigatorView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "0F266B97-A505-47DE-902F-56FF8CD45B64 - e856a952ef1b6a1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Neeo.(AuthNavigatorView in _44FB67807102680039E22F05A8445445).init() -&gt; Neeo.(AuthNavigatorView in _44FB67807102680039E22F05A8445445)"
+                  moduleName = "Neeo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Library/Development/Neeo/Neeo/Resources/StartApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "0F266B97-A505-47DE-902F-56FF8CD45B64 - 4216b0aadd7ac600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Neeo.(AuthNavigatorView in _44FB67807102680039E22F05A8445445).authSessionService.getter : Neeo.AuthSessionService"
+                  moduleName = "Neeo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Library/Development/Neeo/Neeo/Resources/StartApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8FA48E4-ACDE-4BCB-AD87-4D2E58E49BF0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Neeo/Resources/StartApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "AuthNavigatorView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
