@@ -12,8 +12,10 @@ import GoogleSignIn
 // MARK: - Connecting Firebase
 class FirebaseDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        // Intializing Firebase
         FirebaseApp.configure()
-        // Intializing Google Sign In...
+        
+        // Intializing GoogleSignIn
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         

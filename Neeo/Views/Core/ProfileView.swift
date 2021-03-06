@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var authSessionService: AuthSessionService
+    @EnvironmentObject var authSessionService: AuthService
     
     var body: some View {
         NavigationView {
             VStack {
+                Text("Account: \(authSessionService.user?.email ?? "")")
                 Button("Logout", action: self.authSessionService.logout)
             } //: VSTACK
             .navigationBarTitle("Profile")

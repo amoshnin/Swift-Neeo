@@ -9,27 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showForm: Bool = false
-    @ObservedObject var projectsListViewModel: ProjectsListViewModel
+    @ObservedObject var projectsListViewModel = ProjectsListViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 self.list(projects: self.projectsListViewModel.viewModels)
             } //: VSTACK
-            .sheet(isPresented: self.$showForm,
-                   content: { ProjectForm(projectsListViewModel: projectsListViewModel) })
-            
+            .sheet(isPresented: self.$showForm) { ProjectForm(projectsListViewModel:projectsListViewModel) }
             .navigationBarItems(trailing: Button("Add new") { self.showForm.toggle() })
         } //: NAVIGATION_VIEW
-        .onAppear{print(self.projectsListViewModel.viewModels, "the list")}
     }
     
     private func list(projects: [ProjectViewModel]) -> some View {
         return List {
+            Text("dksjadksa")
             ForEach(0..<projects.count) { index in
-                ProjectRowView(project: projects[index])
-            }
-        }
+                ProjectRowView(projectViewModel: projects[index])
+            } //: FOR_EACH
+        } //: LIST
+        .onAppear { print(projects, "projects") }
     }
 }
 
@@ -59,13 +58,15 @@ private struct ProjectForm: View {
     }
     
     private func addProject(title: String) {
-        let project = ProjectModel(title: title, createdAt: Date(), updatedAt: Date())
+        let project = Project(title: title
+//                                   createdAt: Date(), updatedAt: Date()
+        )
         projectsListViewModel.add(project)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(projectsListViewModel: ProjectsListViewModel())
+        HomeView()
     }
 }

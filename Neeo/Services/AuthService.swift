@@ -10,9 +10,9 @@ import Combine
 import Firebase
 import GoogleSignIn
 
-class AuthSessionService: ObservableObject {
-    var didChange = PassthroughSubject<AuthSessionService, Never>()
-    @Published var session: UserModel? { didSet { self.didChange.send(self) }}
+class AuthService: ObservableObject {
+    var didChange = PassthroughSubject<AuthService, Never>()
+    @Published var user: User? { didSet { self.didChange.send(self) }}
     var handle: AuthStateDidChangeListenerHandle?
     
     func listen() {
@@ -21,10 +21,10 @@ class AuthSessionService: ObservableObject {
             if let user = user {
                 // if we have a user, create a new user model
                 print("Got user: \(user)")
-                self.session = UserModel(uid: user.uid, email: user.email, displayName: user.displayName, photoURL: user.photoURL)
+                self.user = User(uid: user.uid, email: user.email, displayName: user.displayName, photoURL: user.photoURL)
             } else {
                 // if we don't have a user, set our session to nil
-                self.session = nil
+                self.user = nil
             }
         }
     }
@@ -59,7 +59,7 @@ class AuthSessionService: ObservableObject {
     func logout () {
         do {
             try Auth.auth().signOut()
-            self.session = nil
+            self.user = nil
         } catch {}
     }
 }

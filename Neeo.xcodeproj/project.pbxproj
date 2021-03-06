@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		AC11CFFE25F2E06C0062439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */; };
 		AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D01325F2E1910062439B /* FirebaseDelegate.swift */; };
-		AC11D01E25F2E7BA0062439B /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */; };
-		AC11D02125F2E8540062439B /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02025F2E8540062439B /* ProjectModel.swift */; };
-		AC11D02425F2E9EF0062439B /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */; };
+		AC11D02125F2E8540062439B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02025F2E8540062439B /* Project.swift */; };
 		AC275B4425F2DB840034075C /* StartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4325F2DB840034075C /* StartApp.swift */; };
 		AC275B4625F2DB840034075C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4525F2DB840034075C /* HomeView.swift */; };
 		AC275B4825F2DB870034075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4725F2DB870034075C /* Assets.xcassets */; };
 		AC275B4B25F2DB870034075C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4A25F2DB870034075C /* Preview Assets.xcassets */; };
-		AC4AAA9D25F3520700E18BFA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */; };
 		AC4AAAA325F3568600E18BFA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAA225F3568600E18BFA /* ProjectView.swift */; };
 		AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */; };
 		AC4AAAAB25F35AF500E18BFA /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC4AAAAA25F35AF500E18BFA /* PureSwiftUI */; };
-		AC4AAAB025F3631D00E18BFA /* AuthSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAAF25F3631D00E18BFA /* AuthSessionService.swift */; };
+		AC4AAAB025F3631D00E18BFA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAAF25F3631D00E18BFA /* AuthService.swift */; };
 		AC4AAAB425F3643D00E18BFA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAB325F3643D00E18BFA /* AuthView.swift */; };
 		AC4AAAB825F3645900E18BFA /* AuthFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAAB725F3645900E18BFA /* AuthFormView.swift */; };
-		AC86509325F3709500AC5BAE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86509225F3709500AC5BAE /* UserModel.swift */; };
+		AC86509325F3709500AC5BAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86509225F3709500AC5BAE /* User.swift */; };
+		ACBECAD925F39C420016AD7D /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBECAD825F39C420016AD7D /* ProjectViewModel.swift */; };
 		ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */; };
 		ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */; };
 		ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */; };
@@ -36,22 +34,20 @@
 		66AC2098F9118DA203627C8D /* Pods-Neeo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neeo.debug.xcconfig"; path = "Target Support Files/Pods-Neeo/Pods-Neeo.debug.xcconfig"; sourceTree = "<group>"; };
 		AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC11D01325F2E1910062439B /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
-		AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
-		AC11D02025F2E8540062439B /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
-		AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
+		AC11D02025F2E8540062439B /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		AC275B4025F2DB840034075C /* Neeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC275B4325F2DB840034075C /* StartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartApp.swift; sourceTree = "<group>"; };
 		AC275B4525F2DB840034075C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC275B4725F2DB870034075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC275B4A25F2DB870034075C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC275B4C25F2DB870034075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		AC4AAAA225F3568600E18BFA /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		AC4AAAA625F356A300E18BFA /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
-		AC4AAAAF25F3631D00E18BFA /* AuthSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionService.swift; sourceTree = "<group>"; };
+		AC4AAAAF25F3631D00E18BFA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AC4AAAB325F3643D00E18BFA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		AC4AAAB725F3645900E18BFA /* AuthFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormView.swift; sourceTree = "<group>"; };
-		AC86509225F3709500AC5BAE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AC86509225F3709500AC5BAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ACBECAD825F39C420016AD7D /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		ACD2798A25F2DD7A00EBB8B6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		ACD2799025F2DDC700EBB8B6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ACD2799525F2DDEF00EBB8B6 /* TabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigator.swift; sourceTree = "<group>"; };
@@ -99,14 +95,6 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		AC11D01B25F2E6950062439B /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				AC11D01D25F2E7BA0062439B /* ProjectsRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		AC275B3725F2DB840034075C = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +118,8 @@
 			children = (
 				AC4AAAAE25F3630E00E18BFA /* Services */,
 				AC275B5725F2DC660034075C /* Resources */,
-				AC11D01B25F2E6950062439B /* Repositories */,
 				AC275B5525F2DBAE0034075C /* Models */,
-				AC275B5425F2DBAB0034075C /* ViewModels */,
+				ACBECAD725F39C2F0016AD7D /* ViewModels */,
 				AC275B5325F2DBA80034075C /* Views */,
 				AC275B4C25F2DB870034075C /* Info.plist */,
 				AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */,
@@ -159,20 +146,11 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AC275B5425F2DBAB0034075C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				AC4AAA9C25F3520700E18BFA /* ProjectViewModel.swift */,
-				AC11D02325F2E9EF0062439B /* ProjectsListViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		AC275B5525F2DBAE0034075C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC11D02025F2E8540062439B /* ProjectModel.swift */,
-				AC86509225F3709500AC5BAE /* UserModel.swift */,
+				AC11D02025F2E8540062439B /* Project.swift */,
+				AC86509225F3709500AC5BAE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +177,7 @@
 		AC4AAAAE25F3630E00E18BFA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AAAAF25F3631D00E18BFA /* AuthSessionService.swift */,
+				AC4AAAAF25F3631D00E18BFA /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -211,6 +189,14 @@
 				AC4AAAB725F3645900E18BFA /* AuthFormView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		ACBECAD725F39C2F0016AD7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ACBECAD825F39C420016AD7D /* ProjectViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ACD2799325F2DDD800EBB8B6 /* Core */ = {
@@ -381,22 +367,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC275B4625F2DB840034075C /* HomeView.swift in Sources */,
-				AC11D02425F2E9EF0062439B /* ProjectsListViewModel.swift in Sources */,
 				AC275B4425F2DB840034075C /* StartApp.swift in Sources */,
 				AC4AAAB425F3643D00E18BFA /* AuthView.swift in Sources */,
 				ACD2799125F2DDC700EBB8B6 /* ProfileView.swift in Sources */,
-				AC4AAA9D25F3520700E18BFA /* ProjectViewModel.swift in Sources */,
-				AC11D01E25F2E7BA0062439B /* ProjectsRepository.swift in Sources */,
+				ACBECAD925F39C420016AD7D /* ProjectViewModel.swift in Sources */,
 				ACD2798B25F2DD7A00EBB8B6 /* CalendarView.swift in Sources */,
 				AC4AAAB825F3645900E18BFA /* AuthFormView.swift in Sources */,
-				AC11D02125F2E8540062439B /* ProjectModel.swift in Sources */,
+				AC11D02125F2E8540062439B /* Project.swift in Sources */,
 				ACD2799C25F2DE2700EBB8B6 /* MessangerView.swift in Sources */,
-				AC4AAAB025F3631D00E18BFA /* AuthSessionService.swift in Sources */,
+				AC4AAAB025F3631D00E18BFA /* AuthService.swift in Sources */,
 				AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */,
 				ACD2799625F2DDEF00EBB8B6 /* TabBarNavigator.swift in Sources */,
 				ACD279A225F2DE7900EBB8B6 /* WelcomeView.swift in Sources */,
 				AC4AAAA325F3568600E18BFA /* ProjectView.swift in Sources */,
-				AC86509325F3709500AC5BAE /* UserModel.swift in Sources */,
+				AC86509325F3709500AC5BAE /* User.swift in Sources */,
 				AC4AAAA725F356A300E18BFA /* ProjectRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

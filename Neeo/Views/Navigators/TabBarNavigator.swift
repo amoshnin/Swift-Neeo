@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarNavigator: View {
     var body: some View {
         TabView {
-            HomeView(projectsListViewModel: ProjectsListViewModel())
+            HomeView()
                 .tabItem { Label("Home", systemImage: "house") }
             
             CalendarView()

@@ -16,7 +16,7 @@ struct StartView: App {
         WindowGroup {
             VStack {
                 AuthNavigatorView()
-            }.environmentObject(AuthSessionService())
+            }.environmentObject(AuthService())
         } //: WINDOW_GROUP
         
     }
@@ -24,12 +24,12 @@ struct StartView: App {
 
 private struct AuthNavigatorView: View {
     @AppStorage("isAuth") private var isAuth: Bool = false
-    @EnvironmentObject var authSessionService: AuthSessionService
+    @EnvironmentObject var authSessionService: AuthService
     
     var body: some View  {
         VStack {
             if self.isAuth {
-                if self.authSessionService.session != nil {
+                if self.authSessionService.user != nil {
                     TabBarNavigator()
                 } else {
                     AuthView()

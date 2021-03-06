@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @EnvironmentObject var authSessionService: AuthSessionService
+    @EnvironmentObject var authSessionService: AuthService
     
     var body: some View {
         NavigationView {

@@ -11,7 +11,7 @@ import Firebase
 
 struct AuthFormView: View {
     var isRegister: Bool?
-    @EnvironmentObject var authSessionService: AuthSessionService
+    @EnvironmentObject var authSessionService: AuthService
     
     @State private var email: String = ""
     @State private var password: String = ""

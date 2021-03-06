@@ -9,11 +9,11 @@ import SwiftUI
 import PureSwiftUI
 
 struct ProjectRowView: View {
-    var project: ProjectViewModel
+    var projectViewModel: ProjectViewModel
     
     var body: some View {
         HStack {
-            Text(project.project.title)
+            Text(projectViewModel.project.title)
         }
     }
 }
@@ -28,7 +28,7 @@ private struct CheckboxShape: Shape {
 struct ProjectRowView_Previews: PreviewProvider {
     static var previews: some View {
         let project = projectsTestData[0]
-        ProjectRowView(project: project)
+        ProjectRowView(projectViewModel: project)
             .previewSizeThatFits()
             .padding()
     }
