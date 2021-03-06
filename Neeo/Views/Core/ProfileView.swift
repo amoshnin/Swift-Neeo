@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    // MARK: - State
     @EnvironmentObject var authSessionService: AuthService
     
+    // MARK: - UI Components
     var body: some View {
         NavigationView {
             VStack {
@@ -24,5 +26,6 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(AuthService())
     }
 }

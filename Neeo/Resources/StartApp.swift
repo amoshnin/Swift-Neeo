@@ -8,6 +8,10 @@
 import SwiftUI
 import Firebase
 
+// MARK: - Global Values
+var rect = UIScreen.main.bounds
+var edges = UIApplication.shared.windows.first?.safeAreaInsets
+
 @main
 struct StartView: App {
     @UIApplicationDelegateAdaptor(FirebaseDelegate.self) var delegate

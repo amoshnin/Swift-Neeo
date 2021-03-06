@@ -9,7 +9,7 @@ import SwiftUI
 import PureSwiftUI
 import Firebase
 
-struct AuthFormView: View {
+struct AuthForm: View {
     var isRegister: Bool?
     @EnvironmentObject var authSessionService: AuthService
     
@@ -71,6 +71,6 @@ struct AuthFormView: View {
 
 struct AuthFormView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthFormView()
+        AuthForm()
     }
 }

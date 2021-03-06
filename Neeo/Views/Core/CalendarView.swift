@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CalendarView: View {
+    // MARK: - State
+    
+    // MARK: - UI Components
     var body: some View {
         NavigationView {
             VStack {

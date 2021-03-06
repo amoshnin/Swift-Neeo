@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    // MARK: - State
+    @State var isSheetOpen = false
+    
+    // MARK: - UI Components
     var body: some View {
-        ProjectsListView()
+        NavigationView {
+            ProjectsListView()
+                .sheet(isPresented: self.$isSheetOpen, content: { ProjectEditView() })
+        } //: NAVIGATION_VIEW
+        .navigationBarTitle("Projects")
+        .navigationBarItems(trailing: self.addButton())
+    }
+    
+    private func addButton() -> some View {
+        Button(action: { self.isSheetOpen.toggle() }) {
+            Image(systemName: "plus")
+        } //: BUTTON
     }
 }
 

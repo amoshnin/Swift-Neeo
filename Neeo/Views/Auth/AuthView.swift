@@ -13,8 +13,8 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink("Login with email", destination: AuthFormView())
-                NavigationLink("Register with email", destination: AuthFormView(isRegister: true))
+                NavigationLink("Login with email", destination: AuthForm())
+                NavigationLink("Register with email", destination: AuthForm(isRegister: true))
                 
                 Button("SignInWithGoogle") { authSessionService.signInWithGoogle() }
             } //: VSTACK

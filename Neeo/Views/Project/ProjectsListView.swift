@@ -10,19 +10,17 @@ import SwiftUI
 struct ProjectsListView: View {
     // MARK: - State
     @StateObject var viewModel = ProjectsViewModel()
-    @State var isSheetOpen = false
     
     // MARK: - UI Components
     var body: some View {
-        NavigationView {
+
             List {
                 ForEach(viewModel.projects) { project in
                     self.projectRowView(project: project)
                 }
                 .onDelete() { indexSet in viewModel.deleteProjects(indexSet: indexSet) }
             } //: LIST
-            .navigationBarTitle("Projects")
-            .navigationBarItems(trailing: self.addButton())
+            .listStyle(PlainListStyle())
             .onAppear() {
                 print("ProjectsListView appears. Subscribing to data updates.")
                 self.viewModel.subscribe()
@@ -35,14 +33,6 @@ struct ProjectsListView: View {
               // print("BooksListView disappears. Unsubscribing from data updates.")
               // self.viewModel.unsubscribe()
             }
-            .sheet(isPresented: self.$isSheetOpen, content: { ProjectEditView() })
-        } //: NAVIGATION_VIEW
-    }
-    
-    private func addButton() -> some View {
-        Button(action: { self.isSheetOpen.toggle() }) {
-            Image(systemName: "plus")
-        } //: BUTTON
     }
     
     private func projectRowView(project: Project) -> some View {
