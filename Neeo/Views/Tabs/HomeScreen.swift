@@ -22,6 +22,7 @@ struct HomeScreen: View {
                         
                         ScrollView(.vertical) {
                             self.StoriesScroller()
+                            
                             ProjectsListView()
                         } //: SCROLL_VIEW
                     } //: VSTACK

@@ -17,8 +17,8 @@ struct ProjectItemView: View {
     // MARK: - UI Components
     var body: some View {
         HStack {
-            if (false) { self.shimmerView().onAppear { self.startShimmering() } } else { self.viewView() }
-        }
+            if (self.project.title == "") { self.shimmerView().onAppear { self.startShimmering() } } else { self.viewView() }
+        } //: H_STACK
         .padding()
     }
     

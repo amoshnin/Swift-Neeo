@@ -44,7 +44,6 @@ struct ProjectsListView: View {
                 .onReceive(self.time, perform: { _ in
                     if geo.frame(in: .global).maxY < UIScreen.main.bounds.height - 80 {
                         self.updateData()
-                        
                         self.time.upstream.connect().cancel()
                     }
                 })
@@ -60,10 +59,7 @@ struct ProjectsListView: View {
     
     private func updateData() {
         print("Update data...")
-        
-        
-            self.viewModel.getProjects()
-        
+        self.viewModel.getProjects()
     }
 }
 
