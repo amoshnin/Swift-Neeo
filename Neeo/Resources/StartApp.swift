@@ -36,7 +36,7 @@ private struct AuthNavigatorView: View {
                 if self.authSessionService.user != nil {
                     TabBarNavigator()
                 } else {
-                    AuthView()
+                    AuthScreen()
                 }
             } else {
                 WelcomeView()

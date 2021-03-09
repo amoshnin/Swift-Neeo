@@ -5,7 +5,7 @@
 //  Created by Артём Мошнин on 6/3/21.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 import FirebaseFirestore
 
@@ -15,7 +15,7 @@ class ProjectsViewModel: ObservableObject {
     
     // MARK: - Internal properties
     private let path = "projects"
-    private var db = Firestore.firestore()
+    private var store = Firestore.firestore()
     private var listenerRegistration: ListenerRegistration?
     
     // MARK: - Constructors
@@ -33,7 +33,7 @@ class ProjectsViewModel: ObservableObject {
     
     func subscribe() {
         if listenerRegistration == nil {
-            listenerRegistration = db.collection(path).addSnapshotListener({ (querySnapshot, error) in
+            listenerRegistration = store.collection(path).addSnapshotListener({ (querySnapshot, error) in
                 guard let documents = querySnapshot?.documents else {
                     print("No documents")
                     return
@@ -42,6 +42,10 @@ class ProjectsViewModel: ObservableObject {
                 self.projects = documents.compactMap({ (queryDocumentSnapshot) in
                     try? queryDocumentSnapshot.data(as: Project.self)
                 })
+                
+                withAnimation(Animation.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+            
+                }
             })
         }
     }
@@ -50,7 +54,7 @@ class ProjectsViewModel: ObservableObject {
         let projects = indexSet.lazy.map { self.projects[$0] }
         projects.forEach { (project) in
             if let documentId = project.id {
-                db.collection(path).document(documentId).delete { (error) in
+                store.collection(path).document(documentId).delete { (error) in
                     if let error = error {
                         print("Unable to remove document: \(error.localizedDescription)")
                     }

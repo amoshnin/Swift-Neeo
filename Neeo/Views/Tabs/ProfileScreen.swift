@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ProfileScreen: View {
     // MARK: - State
-    @EnvironmentObject var authSessionService: AuthService
+    @EnvironmentObject var authService: AuthService
     
     // MARK: - UI Components
     var body: some View {
         NavigationView {
             VStack {
-                Text("Account: \(authSessionService.user?.email ?? "")")
-                Button("Logout", action: self.authSessionService.logout)
+                Text("Account: \(authService.user?.email ?? "")")
+                Button("Logout", action: self.authService.logout)
             } //: VSTACK
             .navigationBarTitle("Profile")
         } //: NAVIGATION_VIEW
@@ -25,7 +25,7 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileScreen()
             .environmentObject(AuthService())
     }
 }

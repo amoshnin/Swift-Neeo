@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProjectDetailsView: View {
+struct ProjectDetailsScreen: View {
     // MARK: - State
     @Environment(\.presentationMode) var presentationMode
     @State var isSheetOpen = false
@@ -24,7 +24,7 @@ struct ProjectDetailsView: View {
         .navigationBarTitle(project.title)
         .navigationBarItems(trailing: editButton { self.isSheetOpen.toggle() } )
         .sheet(isPresented: self.$isSheetOpen) {
-            ProjectEditView(viewModel: ProjectViewModel(project: self.project), mode: .edit) { (result) in
+            ProjectEditScreen(viewModel: ProjectViewModel(project: self.project), mode: .edit) { (result) in
                 if case .success(let action) = result, action == .delete {
                     self.presentationMode.wrappedValue.dismiss()
                 }
@@ -42,6 +42,6 @@ struct ProjectDetailsView: View {
 struct ProjectDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let project = Project(title: "Changer", description: "Some long description")
-        return ProjectDetailsView(project: project)
+        return ProjectDetailsScreen(project: project)
     }
 }

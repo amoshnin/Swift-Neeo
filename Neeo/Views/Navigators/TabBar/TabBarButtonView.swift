@@ -30,9 +30,9 @@ struct TabBarButtonView: View {
             return AnyView(
                 Button(action: self.onTabClicked) {
                     Image(systemName: title)
-                        .font(.system(size: 22, weight: .semibold))
+                        .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(Color.primary)
-                        .offset(y: self.selectedTab == self.image ? -8 : 0)
+                        .offset(y: self.selectedTab == self.image ? -7 : 0)
                 } //: BUTTON
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             )

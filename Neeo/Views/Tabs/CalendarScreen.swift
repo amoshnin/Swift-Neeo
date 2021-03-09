@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarView: View {
+struct CalendarScreen: View {
     // MARK: - State
     
     // MARK: - UI Components
@@ -23,6 +23,6 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarScreen()
     }
 }

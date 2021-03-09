@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MessangerView: View {
+struct MessangerScreen: View {
     // MARK: - State
     
     // MARK: - UI Components
@@ -23,6 +23,6 @@ struct MessangerView: View {
 
 struct MessangerView_Previews: PreviewProvider {
     static var previews: some View {
-        MessangerView()
+        MessangerScreen()
     }
 }

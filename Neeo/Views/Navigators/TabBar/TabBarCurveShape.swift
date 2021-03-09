@@ -30,8 +30,8 @@ struct TabBarCurveShape: Shape {
         let mid = tabPoint
         
         let horizontalRadius: CGFloat = 40
-        let topHorizontalRadius: CGFloat = 15
-        let curvingRate: CGFloat = 14
+        let topHorizontalRadius: CGFloat = 12
+        let curvingRate: CGFloat = 12
         
         // MARK: - Drawing curves
         path.move(to: CGPoint(x: mid - horizontalRadius, y: rect.height))

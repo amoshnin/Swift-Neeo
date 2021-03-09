@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct HomeView: View {
+struct HomeScreen: View {
     // MARK: - State
     @State var isSheetOpen = false
     
@@ -26,7 +26,7 @@ struct HomeView: View {
                         } //: SCROLL_VIEW
                     } //: VSTACK
                     .navigationBarHidden(true)
-                .sheet(isPresented: self.$isSheetOpen, content: { ProjectEditView() })
+                .sheet(isPresented: self.$isSheetOpen, content: { ProjectEditScreen() })
             }
         } //: NAVIGATION_VIEW
     }
@@ -73,7 +73,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeScreen()
     }
 }
 

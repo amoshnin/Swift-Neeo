@@ -11,21 +11,21 @@ import SwiftUI
 private let tabs = ["newspaper", "clock", "tv", "person"]
 struct TabBarNavigator: View {
     // MARK: - State
-    @State private var selectedTab = "house"
+    @State private var selectedTab = tabs[0]
     @State private var tabPoints = [CGFloat]()
     @Environment(\.colorScheme) var scheme
     
     // MARK: - UI Components
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeView()
+            HomeScreen()
                 .tag(tabs[0])
-            CalendarView()
+            CalendarScreen()
                 .tag(tabs[1])
-            MessangerView()
+            MessangerScreen()
                 .tag(tabs[2])
-//            ProfileView()
-//                .tag(tabs[3])
+            ProfileScreen()
+                .tag(tabs[3])
         }
         .overlay(customTabBar())
     }
@@ -40,18 +40,20 @@ struct TabBarNavigator: View {
             }
             .padding()
             .background((self.scheme == .dark ? Color("background3") : Color.white)  .clipShape(TabBarCurveShape(tabPoint: self.getCurvePoint() - 15)))
-            .overlay(Circle()
-                        .fill(Color.white)
-                        .frame(width: 5, height: 5)
-                        .offset(x: self.getCurvePoint() - 19.1)
-                        .shadow(1),
-                     alignment: .bottomLeading
-            )
+            .overlay(self.getCurveView(), alignment: .bottomLeading)
             .cornerRadius(15)
             .padding(.horizontal)
             .shadow(2)
             .neumorphicShadow()
         }
+    }
+    
+    private func getCurveView() -> some View {
+        Circle()
+            .fill(Color.white)
+            .frame(width: 5, height: 5)
+            .offset(x: self.getCurvePoint() - 19.1)
+            .shadow(1)
     }
     
     private func getCurvePoint() -> CGFloat {
@@ -76,5 +78,6 @@ struct TabBarNavigator_Previews: PreviewProvider {
     static var previews: some View {
         TabBarNavigator()
             .showLayoutGuides(true)
+            .environmentObject(AuthService())
     }
 }

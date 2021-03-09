@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthView: View {
+struct AuthScreen: View {
     // MARK: - State
     @EnvironmentObject var authSessionService: AuthService
     
@@ -15,8 +15,8 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink("Login with email", destination: AuthFormView())
-                NavigationLink("Register with email", destination: AuthFormView(isRegister: true))
+                NavigationLink("Login with email", destination: AuthFormScreen())
+                NavigationLink("Register with email", destination: AuthFormScreen(isRegister: true))
                 
                 Button("SignInWithGoogle") { authSessionService.signInWithGoogle() }
             } //: VSTACK
@@ -26,6 +26,6 @@ struct AuthView: View {
 
 struct AuthHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView()
+        AuthScreen()
     }
 }

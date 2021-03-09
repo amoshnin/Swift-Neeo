@@ -18,7 +18,7 @@ enum Action {
     case cancel
 }
 
-struct ProjectEditView: View {
+struct ProjectEditScreen: View {
     // MARK: - State
     @Environment(\.presentationMode) private var presentationMode
     @StateObject var viewModel = ProjectViewModel()
@@ -47,8 +47,8 @@ struct ProjectEditView: View {
             .navigationTitle(self.mode == .new ? "New book" : viewModel.project.title)
             .navigationBarTitleDisplayMode(self.mode == .new ? .inline : .large)
             .navigationBarItems(
-                leading: cancelButton(),
-                trailing: saveButton()
+                leading: cancelButtonView(),
+                trailing: saveButtonView()
             )
             .actionSheet(isPresented: self.$isSheetOpen) {
                 ActionSheet(title: Text("Are you sure?"), buttons:
@@ -58,20 +58,21 @@ struct ProjectEditView: View {
         } //: NAVIGATION_VIEW
     }
     
-    private func cancelButton() -> some View {
+    // MARK: - View Functions
+    private func cancelButtonView() -> some View {
         Button(action: { self.handleCancelTapped() }) {
             Text("Cancel")
         }
     }
     
-    private func saveButton() -> some View {
+    private func saveButtonView() -> some View {
         Button(action: { self.handleDoneTapped() }) {
             Text(self.mode == .new ? "Done" : "Save")
         } //: BUTTON
         .disabled(!viewModel.modified)
     }
     
-    // MARK: - Action Handlers
+    // MARK: - Action Functions
     private func handleCancelTapped() {
         self.dismiss()
     }
@@ -94,6 +95,6 @@ struct ProjectEditView: View {
 
 struct ProjectEditView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectEditView()
+        ProjectEditScreen()
     }
 }
