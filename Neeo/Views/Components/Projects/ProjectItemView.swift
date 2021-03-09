@@ -16,12 +16,10 @@ struct ProjectItemView: View {
     
     // MARK: - UI Components
     var body: some View {
-        let isLoading = self.project.title != nil
         HStack {
-            if (isLoading) { self.shimmerView() } else { self.viewView() }
+            if (false) { self.shimmerView().onAppear { self.startShimmering() } } else { self.viewView() }
         }
         .padding()
-        .onAppear { self.startShimmering() }
     }
     
     // MARK: - UI Functions
@@ -78,7 +76,7 @@ struct ProjectItemView: View {
         Rectangle()
             .fill(color2.opacity(opacity2))
             .rotationEffect(.init(degrees: 70))
-            .offset(x: self.isShimmering ? 1000 : -350)
+            .offset(x: self.project.shown ? 1000 : -350)
     }
     
     // MARK: - Action Functions

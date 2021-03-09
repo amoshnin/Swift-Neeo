@@ -12,29 +12,43 @@ import FirebaseFirestore
 class ProjectsViewModel: ObservableObject {
     // MARK: - Public properties
     @Published var projects = [Project]()
+    @Published var lastDoc: QueryDocumentSnapshot?
     
     // MARK: - Internal properties
     private let path = "projects"
     private var store = Firestore.firestore()
-    private var listenerRegistration: ListenerRegistration?
     
     // MARK: - Constructors
-    deinit {
-        self.unsubscribe()
-    }
     
     // MARK: - Firestore
-    func unsubscribe() {
-        if self.listenerRegistration != nil {
-            self.listenerRegistration?.remove()
-            self.listenerRegistration = nil
-        }
-    }
-    
-    func subscribe() {
-        if listenerRegistration == nil {
-            listenerRegistration = store.collection(path).addSnapshotListener({ (querySnapshot, error) in
-                guard let documents = querySnapshot?.documents else {
+    func getProjects() {
+        let request = store.collection(path)
+        if let lastDoc = self.lastDoc {
+            let tempItem = Project(id: "JAJA\(self.projects.count)", title: "treterer", description: "rere", shown: false)
+            self.projects.append(tempItem)
+            withAnimation(Animation.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+                self.projects[self.projects.count - 1].shown.toggle()
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.projects.removeLast()
+                request.start(afterDocument: lastDoc).getDocuments { (snap, error) in
+                                guard let documents = snap?.documents else {
+                                    print("No documents")
+                                    return
+                                }
+                
+                               
+                                self.projects.append(contentsOf: documents.compactMap({ (queryDocumentSnapshot) in
+                                    try? queryDocumentSnapshot.data(as: Project.self)
+                                }))
+                
+                                self.lastDoc = documents.last
+            }
+            }
+        } else {
+            request.limit(to: 8).getDocuments { (snap, error) in
+                guard let documents = snap?.documents else {
                     print("No documents")
                     return
                 }
@@ -43,10 +57,8 @@ class ProjectsViewModel: ObservableObject {
                     try? queryDocumentSnapshot.data(as: Project.self)
                 })
                 
-                withAnimation(Animation.linear(duration: 1.5).repeatForever(autoreverses: false)) {
-            
-                }
-            })
+                self.lastDoc = documents.last
+            }
         }
     }
     

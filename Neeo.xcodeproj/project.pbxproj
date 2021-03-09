@@ -10,6 +10,7 @@
 		AC11CFFE25F2E06C0062439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */; };
 		AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D01325F2E1910062439B /* FirebaseDelegate.swift */; };
 		AC11D02125F2E8540062439B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11D02025F2E8540062439B /* Project.swift */; };
+		AC2747F225F7A37000EAF4C2 /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2747F125F7A37000EAF4C2 /* MessengerViewModel.swift */; };
 		AC275B4425F2DB840034075C /* StartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC275B4325F2DB840034075C /* StartApp.swift */; };
 		AC275B4825F2DB870034075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4725F2DB870034075C /* Assets.xcassets */; };
 		AC275B4B25F2DB870034075C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC275B4A25F2DB870034075C /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		AC11CFFD25F2E06C0062439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC11D01325F2E1910062439B /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
 		AC11D02025F2E8540062439B /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		AC2747F125F7A37000EAF4C2 /* MessengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewModel.swift; sourceTree = "<group>"; };
 		AC275B4025F2DB840034075C /* Neeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC275B4325F2DB840034075C /* StartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartApp.swift; sourceTree = "<group>"; };
 		AC275B4725F2DB870034075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				ACBECAD825F39C420016AD7D /* ProjectViewModel.swift */,
 				ACBECADE25F3A14D0016AD7D /* ProjectsViewModel.swift */,
+				AC2747F125F7A37000EAF4C2 /* MessengerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				AC4AAAB025F3631D00E18BFA /* AuthService.swift in Sources */,
 				ACBECAFE25F3D3470016AD7D /* TabBarCurveShape.swift in Sources */,
 				AC11D01425F2E1910062439B /* FirebaseDelegate.swift in Sources */,
+				AC2747F225F7A37000EAF4C2 /* MessengerViewModel.swift in Sources */,
 				ACDE2C2D25F3D7F6008852EB /* StoryBadgeView.swift in Sources */,
 				ACBECAF025F3A9880016AD7D /* ProjectEditScreen.swift in Sources */,
 				ACD2799625F2DDEF00EBB8B6 /* TabBarView.swift in Sources */,

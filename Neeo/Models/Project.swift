@@ -12,6 +12,7 @@ struct Project: Identifiable, Codable {
     @DocumentID var id: String?
     var title: String
     var description: String
+    var shown = false
     
     enum CodingKeys: String, CodingKey {
         case id
